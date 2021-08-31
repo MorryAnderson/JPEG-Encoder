@@ -1,0 +1,84 @@
+module DCT1D(
+    input I_clk,
+    input I_rst_n,
+    input[7:0] I_data,
+    output reg[15:0] O_f0,
+    output reg[15:0] O_f1,
+    output reg[15:0] O_f2,
+    output reg[15:0] O_f3,
+    output reg[15:0] O_f4,
+    output reg[15:0] O_f5,
+    output reg[15:0] O_f6,
+    output reg[15:0] O_f7,
+    output reg O_valid
+);
+
+
+// series to parallel with bias
+wire signed[8:0] x[0:7];
+wire p_clk;
+Series2Parallel series2parallel_inst(
+    .I_clk(I_clk) ,
+    .I_rst_n(I_rst_n) ,
+    .I_data(I_data) ,
+    .O_p0(x[0]) ,
+    .O_p1(x[1]) ,
+    .O_p2(x[2]) ,
+    .O_p3(x[3]) ,
+    .O_p4(x[4]) ,
+    .O_p5(x[5]) ,
+    .O_p6(x[6]) ,
+    .O_p7(x[7]) ,
+    .O_p_clk(p_clk)
+);
+
+// stage 1
+reg signed[9:0] a[0:7];
+integer i1;
+always @(posedge p_clk, negedge I_rst_n) begin
+    if (!I_rst_n) begin
+        for (i1=0; i1<8; i1=i1+1) begin
+            a[i1] <= 0;
+        end
+    end else begin
+        for (i1=0; i1<4; i1=i1+1) begin
+            a[i1] <= x[i1] + x[7-i1];
+        end
+        for (i1=4; i1<8; i1=i1+1) begin
+            a[i1] <= x[7-i1] - x[i1];
+        end
+    end
+end
+
+integer i;
+always @(posedge I_clk, negedge I_rst_n) begin
+    if (!I_rst_n) begin
+        for (i=0; i<8; i=i+1) begin
+//            b[i] <= 0;
+//            c[i] <= 0;
+//            d[i] <= 0;
+//            e[i] <= 0;
+//            f[i] <= 0;
+//            g[i] <= 0;
+        end
+        O_f0 <= 0;
+        O_f1 <= 0;
+        O_f2 <= 0;
+        O_f3 <= 0;
+        O_f4 <= 0;
+        O_f5 <= 0;
+        O_f6 <= 0;
+        O_f7 <= 0;     
+    end else begin
+        O_f0 <= a[0];
+        O_f1 <= a[1];
+        O_f2 <= a[2];
+        O_f3 <= a[3];
+        O_f4 <= a[4];
+        O_f5 <= a[5];
+        O_f6 <= a[6];
+        O_f7 <= a[7];
+    end
+end
+
+endmodule

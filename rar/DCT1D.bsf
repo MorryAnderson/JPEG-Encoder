@@ -1,0 +1,145 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 352 224)
+	(text "DCT1D" (rect 5 0 35 12)(font "Arial" ))
+	(text "inst" (rect 8 192 20 204)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "I_clk" (rect 0 0 18 12)(font "Arial" ))
+		(text "I_clk" (rect 21 27 39 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "I_rst_n" (rect 0 0 29 12)(font "Arial" ))
+		(text "I_rst_n" (rect 21 43 50 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "I_en" (rect 0 0 17 12)(font "Arial" ))
+		(text "I_en" (rect 21 59 38 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "I_valid_data" (rect 0 0 48 12)(font "Arial" ))
+		(text "I_valid_data" (rect 21 75 69 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "I_data[INPUT_WIDTH-1..0]" (rect 0 0 113 12)(font "Arial" ))
+		(text "I_data[INPUT_WIDTH-1..0]" (rect 21 91 134 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 336 32)
+		(output)
+		(text "O_f0[OUTPUT_WIDTH-1..0]" (rect 0 0 120 12)(font "Arial" ))
+		(text "O_f0[OUTPUT_WIDTH-1..0]" (rect 195 27 315 39)(font "Arial" ))
+		(line (pt 336 32)(pt 320 32)(line_width 3))
+	)
+	(port
+		(pt 336 48)
+		(output)
+		(text "O_f1[OUTPUT_WIDTH-1..0]" (rect 0 0 119 12)(font "Arial" ))
+		(text "O_f1[OUTPUT_WIDTH-1..0]" (rect 196 43 315 55)(font "Arial" ))
+		(line (pt 336 48)(pt 320 48)(line_width 3))
+	)
+	(port
+		(pt 336 64)
+		(output)
+		(text "O_f2[OUTPUT_WIDTH-1..0]" (rect 0 0 120 12)(font "Arial" ))
+		(text "O_f2[OUTPUT_WIDTH-1..0]" (rect 195 59 315 71)(font "Arial" ))
+		(line (pt 336 64)(pt 320 64)(line_width 3))
+	)
+	(port
+		(pt 336 80)
+		(output)
+		(text "O_f3[OUTPUT_WIDTH-1..0]" (rect 0 0 120 12)(font "Arial" ))
+		(text "O_f3[OUTPUT_WIDTH-1..0]" (rect 195 75 315 87)(font "Arial" ))
+		(line (pt 336 80)(pt 320 80)(line_width 3))
+	)
+	(port
+		(pt 336 96)
+		(output)
+		(text "O_f4[OUTPUT_WIDTH-1..0]" (rect 0 0 121 12)(font "Arial" ))
+		(text "O_f4[OUTPUT_WIDTH-1..0]" (rect 194 91 315 103)(font "Arial" ))
+		(line (pt 336 96)(pt 320 96)(line_width 3))
+	)
+	(port
+		(pt 336 112)
+		(output)
+		(text "O_f5[OUTPUT_WIDTH-1..0]" (rect 0 0 120 12)(font "Arial" ))
+		(text "O_f5[OUTPUT_WIDTH-1..0]" (rect 195 107 315 119)(font "Arial" ))
+		(line (pt 336 112)(pt 320 112)(line_width 3))
+	)
+	(port
+		(pt 336 128)
+		(output)
+		(text "O_f6[OUTPUT_WIDTH-1..0]" (rect 0 0 120 12)(font "Arial" ))
+		(text "O_f6[OUTPUT_WIDTH-1..0]" (rect 195 123 315 135)(font "Arial" ))
+		(line (pt 336 128)(pt 320 128)(line_width 3))
+	)
+	(port
+		(pt 336 144)
+		(output)
+		(text "O_f7[OUTPUT_WIDTH-1..0]" (rect 0 0 120 12)(font "Arial" ))
+		(text "O_f7[OUTPUT_WIDTH-1..0]" (rect 195 139 315 151)(font "Arial" ))
+		(line (pt 336 144)(pt 320 144)(line_width 3))
+	)
+	(port
+		(pt 336 160)
+		(output)
+		(text "O_data_update" (rect 0 0 61 12)(font "Arial" ))
+		(text "O_data_update" (rect 254 155 315 167)(font "Arial" ))
+		(line (pt 336 160)(pt 320 160)(line_width 1))
+	)
+	(port
+		(pt 336 176)
+		(output)
+		(text "O_data_valid" (rect 0 0 53 12)(font "Arial" ))
+		(text "O_data_valid" (rect 262 171 315 183)(font "Arial" ))
+		(line (pt 336 176)(pt 320 176)(line_width 1))
+	)
+	(parameter
+		"INPUT_WIDTH"
+		"12"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"OUTPUT_WIDTH"
+		""
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 320 192)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 352 -64 452 16))
+)

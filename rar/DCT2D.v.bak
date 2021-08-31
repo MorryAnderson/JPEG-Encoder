@@ -1,0 +1,12 @@
+module DCT2D(
+    input I_clk,
+    input I_rst_n,
+    input I_en,
+    input I_valid_data,
+    input[7:0] I_data,
+    output [15:0] O_dct
+);
+
+
+
+endmodule

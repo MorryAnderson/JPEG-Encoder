@@ -1,0 +1,74 @@
+// 由于采用JPEG推荐量化表，因此DC值最大7位，
+// 对应的最大Huffman码长为7。
+// 此Huffman表包含亮度和色度两张表
+// index为0时读取亮度表，为1时读取色度表 
+// 注意： 码值以左对齐方式读取，
+// length为码长减一，即LSB从高位数时的序号。
+module HuffmanTableDC(
+    input I_clk,
+    input I_rst_n,
+    input I_en,
+    input index,
+    input[2:0] size,
+    output reg[2:0] length,
+    output reg[6:0] code
+);
+
+always @(posedge I_clk, negedge I_rst_n) begin
+    if (!I_rst_n) begin
+        length <= 0;
+    end else if (I_en) begin
+        case ({index, size})
+            // for luminance
+            4'b0000: length <= 2-1;
+            4'b0001: length <= 3-1;
+            4'b0010: length <= 3-1;
+            4'b0011: length <= 3-1;
+            4'b0100: length <= 3-1;
+            4'b0101: length <= 3-1;
+            4'b0110: length <= 4-1;
+            4'b0111: length <= 5-1;
+            // for chrominance
+            4'b1000: length <= 2-1;
+            4'b1001: length <= 2-1;
+            4'b1010: length <= 2-1;
+            4'b1011: length <= 3-1;
+            4'b1100: length <= 4-1;
+            4'b1101: length <= 5-1;
+            4'b1110: length <= 6-1;
+            4'b1111: length <= 7-1;    
+            default: length <= 3'b111;  // -1
+        endcase        
+    end
+end
+
+always @(posedge I_clk, negedge I_rst_n) begin
+    if (!I_rst_n) begin
+        code <= 0;
+    end else if (I_en) begin
+    case ({index, size})
+        // for luminance
+        4'b0000: code <= 7'b00_00000;
+        4'b0001: code <= 7'b010_0000;
+        4'b0010: code <= 7'b011_0000;
+        4'b0011: code <= 7'b100_0000;
+        4'b0100: code <= 7'b101_0000;
+        4'b0101: code <= 7'b110_0000;
+        4'b0110: code <= 7'b1110_000;
+        4'b0111: code <= 7'b11110_00;
+        // for chrominance       
+        4'b1000: code <= 7'b00_00000;
+        4'b1001: code <= 7'b01_00000;
+        4'b1010: code <= 7'b10_00000;
+        4'b1011: code <= 7'b110_0000;
+        4'b1100: code <= 7'b1110_000;
+        4'b1101: code <= 7'b11110_00;
+        4'b1110: code <= 7'b111110_0;
+        4'b1111: code <= 7'b1111110;     
+        default: code <= 7'b0;
+    endcase     
+    end
+end
+
+endmodule
+

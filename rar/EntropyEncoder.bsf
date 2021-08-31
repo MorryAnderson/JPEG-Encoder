@@ -1,0 +1,134 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 256 192)
+	(text "EntropyEncoder" (rect 5 0 72 12)(font "Arial" ))
+	(text "inst" (rect 8 160 20 172)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "I_clk" (rect 0 0 18 12)(font "Arial" ))
+		(text "I_clk" (rect 21 27 39 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "I_rst_n" (rect 0 0 29 12)(font "Arial" ))
+		(text "I_rst_n" (rect 21 43 50 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "I_en" (rect 0 0 17 12)(font "Arial" ))
+		(text "I_en" (rect 21 59 38 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "I_data_valid" (rect 0 0 48 12)(font "Arial" ))
+		(text "I_data_valid" (rect 21 75 69 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "I_yc" (rect 0 0 18 12)(font "Arial" ))
+		(text "I_yc" (rect 21 91 39 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "I_br" (rect 0 0 16 12)(font "Arial" ))
+		(text "I_br" (rect 21 107 37 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "I_block_update" (rect 0 0 60 12)(font "Arial" ))
+		(text "I_block_update" (rect 21 123 81 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "I_data[7..0]" (rect 0 0 44 12)(font "Arial" ))
+		(text "I_data[7..0]" (rect 21 139 65 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "O_huff_len[4..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "O_huff_len[4..0]" (rect 152 27 219 39)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32)(line_width 3))
+	)
+	(port
+		(pt 240 48)
+		(output)
+		(text "O_huff_code[15..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "O_huff_code[15..0]" (rect 142 43 219 55)(font "Arial" ))
+		(line (pt 240 48)(pt 224 48)(line_width 3))
+	)
+	(port
+		(pt 240 64)
+		(output)
+		(text "O_amp_size[2..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "O_amp_size[2..0]" (rect 149 59 219 71)(font "Arial" ))
+		(line (pt 240 64)(pt 224 64)(line_width 3))
+	)
+	(port
+		(pt 240 80)
+		(output)
+		(text "O_amp_code[7..0]" (rect 0 0 75 12)(font "Arial" ))
+		(text "O_amp_code[7..0]" (rect 144 75 219 87)(font "Arial" ))
+		(line (pt 240 80)(pt 224 80)(line_width 3))
+	)
+	(port
+		(pt 240 96)
+		(output)
+		(text "O_zrl" (rect 0 0 21 12)(font "Arial" ))
+		(text "O_zrl" (rect 198 91 219 103)(font "Arial" ))
+		(line (pt 240 96)(pt 224 96)(line_width 1))
+	)
+	(port
+		(pt 240 112)
+		(output)
+		(text "O_huff_code_valid" (rect 0 0 77 12)(font "Arial" ))
+		(text "O_huff_code_valid" (rect 142 107 219 119)(font "Arial" ))
+		(line (pt 240 112)(pt 224 112)(line_width 1))
+	)
+	(port
+		(pt 240 128)
+		(output)
+		(text "O_end_of_block" (rect 0 0 67 12)(font "Arial" ))
+		(text "O_end_of_block" (rect 152 123 219 135)(font "Arial" ))
+		(line (pt 240 128)(pt 224 128)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 224 160)(line_width 1))
+	)
+)

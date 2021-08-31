@@ -1,0 +1,13 @@
+module EntropyEncoder #(
+    parameter INPUT_WIDTH = 8;
+)(
+    input I_clk,
+    input I_rst_n,
+    input I_en,
+    input I_data_valid,
+    input I_block_update,
+    input[INPUT_WIDTH-1:0] I_data,
+    output[31:0] O_stream
+);
+
+endmodule

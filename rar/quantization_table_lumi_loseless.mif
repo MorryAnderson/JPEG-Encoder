@@ -1,0 +1,144 @@
+-- Copyright (C) 2017  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=8;
+DEPTH=128;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=UNS;
+
+CONTENT BEGIN
+	00  :   32;
+	01  :   46;
+	02  :   49;
+	03  :   54;
+	04  :   64;
+	05  :   38;
+	06  :   42;
+	07  :   44;
+	08  :   46;
+	09  :   67;
+	0A  :   71;
+	0B  :   78;
+	0C  :   92;
+	0D  :   54;
+	0E  :   60;
+	0F  :   64;
+	10  :   49;
+	11  :   71;
+	12  :   75;
+	13  :   83;
+	14  :   98;
+	15  :   58;
+	16  :   64;
+	17  :   68;
+	18  :   54;
+	19  :   78;
+	1A  :   83;
+	1B  :   93;
+	1C  :   109;
+	1D  :   64;
+	1E  :   71;
+	1F  :   75;
+	20  :   64;
+	21  :   92;
+	22  :   98;
+	23  :   109;
+	24  :   128;
+	25  :   75;
+	26  :   84;
+	27  :   89;
+	28  :   38;
+	29  :   54;
+	2A  :   58;
+	2B  :   64;
+	2C  :   75;
+	2D  :   44;
+	2E  :   49;
+	2F  :   52;
+	30  :   42;
+	31  :   60;
+	32  :   64;
+	33  :   71;
+	34  :   84;
+	35  :   49;
+	36  :   55;
+	37  :   58;
+	38  :   44;
+	39  :   64;
+	3A  :   68;
+	3B  :   75;
+	3C  :   89;
+	3D  :   52;
+	3E  :   58;
+	3F  :   62;
+	40  :   30;
+	41  :   41;
+	42  :   33;
+	43  :   19;
+	44  :   10;
+	45  :   6;
+	[46..47]  :   7;
+	48  :   41;
+	49  :   51;
+	4A  :   43;
+	4B  :   19;
+	4C  :   15;
+	4D  :   9;
+	[4E..4F]  :   10;
+	50  :   33;
+	51  :   43;
+	52  :   21;
+	53  :   13;
+	54  :   16;
+	55  :   9;
+	56  :   10;
+	57  :   11;
+	[58..59]  :   19;
+	5A  :   13;
+	5B  :   15;
+	5C  :   18;
+	5D  :   10;
+	5E  :   11;
+	5F  :   12;
+	60  :   10;
+	61  :   15;
+	62  :   16;
+	63  :   18;
+	64  :   21;
+	65  :   12;
+	[66..67]  :   14;
+	68  :   6;
+	[69..6A]  :   9;
+	6B  :   10;
+	6C  :   12;
+	6D  :   7;
+	[6E..6F]  :   8;
+	70  :   7;
+	[71..72]  :   10;
+	73  :   11;
+	74  :   14;
+	75  :   8;
+	[76..77]  :   9;
+	78  :   7;
+	79  :   10;
+	7A  :   11;
+	7B  :   12;
+	7C  :   14;
+	7D  :   8;
+	7E  :   9;
+	7F  :   10;
+END;
